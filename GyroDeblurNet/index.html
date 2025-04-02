@@ -2,69 +2,228 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>GyroDeblurNet: Project Page</title>
-  <link rel="stylesheet" href="../stylesheet.css"> <!-- or customize -->
-  <style>
-    body { max-width: 800px; margin: 2em auto; font-family: sans-serif; }
-    img { width: 100%; margin: 1em 0; }
-    pre { background: #f4f4f4; padding: 1em; overflow-x: auto; }
-    h2 { border-bottom: 1px solid #ccc; padding-bottom: 0.2em; }
-  </style>
+  <meta name="description"
+        content="GyroDeblurNet shows robust deblurring performance even in the presence of gyro errors.">
+  <meta name="keywords" content="GyroDeblurNet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gyro-based Neural Single Image Deblurring</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
 <body>
 
-  <h1>Gyro-based Neural Single Image Deblurring</h1>
-  <p><strong>Heemin Yang, Jaesung Rim, Seungyong Lee, Seung-Hwan Baek, Sunghyun Cho</strong><br>
-  POSTECH</p>
 
-  <p>
-    <a href="https://arxiv.org/abs/2404.00916">[Paper]</a> |
-    <a href="https://github.com/hmyang0727/GyroDeblurNet">[Code]</a> |
-    <a href="https://github.com/hmyang0727/GyroDeblurNet">[Dataset]</a>
-  </p>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Gyro-based Neural Single Image Deblurring</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://hmyang0727.github.io">Heemin Yang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://rimchang.github.io/">Jaesung Rim,
+            </span>
+            <span class="author-block">
+              <a href="https://cg.postech.ac.kr/leesy/">Seungyong Lee</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/shbaek/">Seung-Hwan Baek</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scho.pe.kr">Sunghyun Cho</a>,
+            </span>
+          </div>
 
-  <h2>Abstract</h2>
-  <p>
-  In this paper, we present GyroDeblurNet, a novel single-image deblurring method that utilizes a gyro sensor to resolve the ill-posedness of image deblurring.
- The gyro sensor provides valuable information about camera motion that can improve deblurring quality.
- However, exploiting real-world gyro data is challenging due to errors from various sources.
- To handle these errors, GyroDeblurNet is equipped with two novel neural network blocks: a gyro refinement block and a gyro deblurring block.
- The gyro refinement block refines the erroneous gyro data using the blur information from the input image.
- The gyro deblurring block removes blur from the input image using the refined gyro data and further compensates for gyro error by leveraging the blur information from the input image.
- For training a neural network with erroneous gyro data, we propose a training strategy based on the curriculum learning.
- We also introduce a novel gyro data embedding scheme to represent real-world intricate camera shakes.
- Finally, we present both synthetic and real-world datasets for training and evaluating gyro-based single image deblurring.
- Our experiments demonstrate that our approach achieves state-of-the-art deblurring quality by effectively utilizing erroneous gyro data.
-  </p>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">POSTECH,</span>
+          </div>
 
-  <h2>GyroDeblurNet</h2>
-  <p>GyroDeblurNet takes a blurred image and its corresponding gyro data with errors that are collected during the exposure time.</p>
-  <img src="static/image/network_arch.png" alt="Network Architecture">
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2404.00916"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2404.00916"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/hmyang0727/GyroDeblurNet"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/hmyang0727/GyroDeblurNet"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
 
-  <p>To handle gyro errors, GyroDeblurNet is equipped with two novel neural network blocks: the gyro refinement block and the gyro deblurring block.
- The gyro refinement block takes a gyro feature computed from the gyro data and the image feature as its inputs.
- Then it extracts meaningful feature from the erroenous gyro feature with the help of the image feature.
- The gyro deblurring block utilizes the refined gyro feature in the deblurring process using a deformable convolution layer.
- To consider remaining spatial artifacts, spatial refinement of deblurred feature is applied.</p>
-  <img src="static/image/module_arch.png" alt="Modules">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <h2>GyroBlur Dataset</h2>
-  <p>The <strong>GyroBlur-Synth</strong> dataset is the dataset consists of synthetically generated blurred images and its corresponding gyro data.
- The blurred images are generated by warping a sharp image using homographies computed from gyro data.
- Each sample in the dataset consists of a blurred image, corresponding sharp image, and the gyro data sequence.
- The dataset consists of 14,600 and 640 samples in the training set and the test set respectively.
-  The <strong>GyroBlur-Real</strong> dataset is the dataset consists of blurred images and its corresponding gyro data collected from a real-world smartphone with no ground-truth sharp image.</p>
-  <img src="static/image/dataset.png" alt="Dataset">
 
-  <h2>Qualitative Comparison with Other Methods on GyroBlur-Synth</h2>
-  <img src="static/image/result_synth.png" alt="Result Synth">
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+            <p>
+              In this paper, we present GyroDeblurNet, a novel single-image deblurring method that utilizes a gyro sensor to resolve the ill-posedness of image deblurring.
+              The gyro sensor provides valuable information about camera motion that can improve deblurring quality.
+              However, exploiting real-world gyro data is challenging due to errors from various sources.
+              To handle these errors, GyroDeblurNet is equipped with two novel neural network blocks: a gyro refinement block and a gyro deblurring block.
+              The gyro refinement block refines the erroneous gyro data using the blur information from the input image.
+              The gyro deblurring block removes blur from the input image using the refined gyro data and further compensates for gyro error by leveraging the blur information from the input image.
+              For training a neural network with erroneous gyro data, we propose a training strategy based on the curriculum learning.
+              We also introduce a novel gyro data embedding scheme to represent real-world intricate camera shakes.
+              Finally, we present both synthetic and real-world datasets for training and evaluating gyro-based single image deblurring.
+              Our experiments demonstrate that our approach achieves state-of-the-art deblurring quality by effectively utilizing erroneous gyro data.
+            </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
 
-  <h2>Qualitative Comparison with Other Methods on GyroBlur-Real</h2>
-  <img src="static/image/result_real.png" alt="Result Real">
+    <!-- GyroDeblurNet. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">GyroDeblurNet</h2>
+        <div class="content has-text-justified">
+          <p>
+            GyroDeblurNet takes a blurred image and its corresponding gyro data with errors that are collected during the exposure time.
+          </p>
+          <figure class="image is-3by2">
+            <img src="static/image/network_arch.png" alt="GyroDeblurNet overview">
+          </figure>
+          <p>
+            To handle gyro errors, GyroDeblurNet is equipped with two novel neural network blocks: the gyro refinement block and the gyro deblurring block.
+            The gyro refinement block takes a gyro feature computed from the gyro data and the image feature as its inputs.
+            Then it extracts meaningful feature from the erroenous gyro feature with the help of the image feature.
+            The gyro deblurring block utilizes the refined gyro feature in the deblurring process using a deformable convolution layer.
+            To consider remaining spatial artifacts, spatial refinement of deblurred feature is applied.
+          </p>
+          <figure class="image is-3by2">
+            <img src="static/image/module_arch.png" alt="Architecture of the gyro refinement block and the gyro deblurring block">
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!--/ GyroDeblurNet. -->
 
-  <h2>Citation</h2>
-  <pre>
-@misc{yang2024gyrodeblurnet,
+    <!-- GyroBlur. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">GyroBlur Datasets</h2>
+        <div class="content has-text-justified">
+          <p>
+            The <strong>GyroBlur-Synth</strong> dataset is the dataset consists of synthetically generated blurred images and its corresponding gyro data.
+            The blurred images are generated by warping a sharp image using homographies computed from gyro data.
+            Each sample in the dataset consists of a blurred image, corresponding sharp image, and the gyro data sequence.
+            The dataset consists of 14,600 and 640 samples in the training set and the test set respectively.
+            The <strong>GyroBlur-Real</strong> dataset is the dataset consists of blurred images and its corresponding gyro data collected from a real-world smartphone with no ground-truth sharp image.
+          </p>
+          <figure class="image is-3by2">
+            <img src="static/image/dataset.png" alt="GyroBlur datasets">
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!--/ GyroBlur. -->
+
+    <!-- Qual Synth. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative Results on GyroBlur-Synth</h2>
+        <div class="content has-text-justified">
+          <figure class="image is-3by2">
+            <img src="static/image/result_synth.png" alt="Qualitative results on GyroBlur-Synth">
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!--/ Qual Synth. -->
+
+    <!-- Qual Real. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative Results on GyroBlur-Real</h2>
+        <div class="content has-text-justified">
+          <figure class="image is-3by2">
+            <img src="static/image/result_real.png" alt="Qualitative results on GyroBlur-Real">
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!--/ Qual Real. -->
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{yang2024gyrodeblurnet,
   title={Gyro-based Neural Single Image Deblurring}, 
   author={Heemin Yang and Jaesung Rim and Seungyong Lee and Seung-Hwan Baek and Sunghyun Cho},
   year={2024},
@@ -72,8 +231,33 @@
   archivePrefix={arXiv},
   primaryClass={cs.CV},
   url={https://arxiv.org/abs/2404.00916}, 
-}
-  </pre>
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            The source code of this website is borrwed from <a href="https://nerfies.github.io/">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
