@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>GyroDeblurNet: Project Page</title>
+  <link rel="stylesheet" href="../stylesheet.css"> <!-- or customize -->
+  <style>
+    body { max-width: 800px; margin: 2em auto; font-family: sans-serif; }
+    img { width: 100%; margin: 1em 0; }
+    pre { background: #f4f4f4; padding: 1em; overflow-x: auto; }
+    h2 { border-bottom: 1px solid #ccc; padding-bottom: 0.2em; }
+  </style>
+</head>
+<body>
+
+  <h1>Gyro-based Neural Single Image Deblurring</h1>
+  <p><strong>Heemin Yang, Jaesung Rim, Seungyong Lee, Seung-Hwan Baek, Sunghyun Cho</strong><br>
+  POSTECH</p>
+
+  <p>
+    <a href="https://arxiv.org/abs/2404.00916">[Paper]</a> |
+    <a href="https://github.com/hmyang0727/GyroDeblurNet">[Code]</a> |
+    <a href="https://github.com/hmyang0727/GyroDeblurNet">[Dataset]</a>
+  </p>
+
+  <h2>Abstract</h2>
+  <p>
+  In this paper, we present GyroDeblurNet, a novel single-image deblurring method that utilizes a gyro sensor...
+  (keep your abstract as is)
+  </p>
+
+  <h2>GyroDeblurNet</h2>
+  <p>GyroDeblurNet takes a blurred image and its corresponding gyro data with errors...</p>
+  <img src="static/image/network_arch.png" alt="Network Architecture">
+
+  <p>...deblurring block...</p>
+  <img src="static/image/module_arch.png" alt="Modules">
+
+  <h2>GyroBlur Dataset</h2>
+  <p>The <strong>GyroBlur-Synth</strong> dataset is...</p>
+  <img src="static/image/dataset.png" alt="Dataset">
+
+  <h2>Qualitative Comparison with Other Methods on GyroBlur-Synth</h2>
+  <img src="static/image/result_synth.png" alt="Result Synth">
+
+  <h2>Qualitative Comparison with Other Methods on GyroBlur-Real</h2>
+  <img src="static/image/result_real.png" alt="Result Real">
+
+  <h2>Citation</h2>
+  <pre>
+@misc{yang2024gyrodeblurnet,
+  title={Gyro-based Neural Single Image Deblurring}, 
+  author={Heemin Yang and Jaesung Rim and Seungyong Lee and Seung-Hwan Baek and Sunghyun Cho},
+  year={2024},
+  eprint={2404.00916},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2404.00916}, 
+}
+  </pre>
+
+</body>
+</html>
