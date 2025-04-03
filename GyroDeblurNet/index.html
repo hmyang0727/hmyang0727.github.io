@@ -155,12 +155,14 @@
         <div class="content has-text-justified">
           <p>
             GyroDeblurNet takes a blurred image and its corresponding gyro data with errors that are collected during the exposure time.
+            The input gyro data are first transformed into our novel gyro data representation, camera motion field.
+            The motion information in the camera motion field may not match with that of the blurred image due to errors in the gyro data.
           </p>
           <figure class="image">
             <img src="static/image/network_arch.png" alt="GyroDeblurNet overview">
           </figure>
           <p>
-            To handle gyro errors, GyroDeblurNet is equipped with two novel neural network blocks: the gyro refinement block and the gyro deblurring block.
+            To handle such gyro errors, GyroDeblurNet is equipped with two novel neural network blocks: the gyro refinement block and the gyro deblurring block.
             The gyro refinement block takes a gyro feature computed from the gyro data and the image feature as its inputs.
             Then it extracts meaningful feature from the erroenous gyro feature with the help of the image feature.
             The gyro deblurring block utilizes the refined gyro feature in the deblurring process using a deformable convolution layer.
@@ -252,7 +254,7 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            The source code of this website is borrwed from <a href="https://nerfies.github.io/">Nerfies</a>.
+            The source code of this website is borrowed from <a href="https://nerfies.github.io/">Nerfies project website</a>.
           </p>
         </div>
       </div>
